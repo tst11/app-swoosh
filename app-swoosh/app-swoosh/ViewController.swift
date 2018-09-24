@@ -1,12 +1,5 @@
-# app-swoosh
-
-Custom styles in /Views/BorderButton.swift 
-
-add new group Views, new file -> Cocoa Touch Class, subclass of uibutton, class BorderButton, next, create
-
-```swift
 //
-//  BorderButton.swift
+//  ViewController.swift
 //  app-swoosh
 //
 //  Created by Tadas on 01/09/2018.
@@ -15,20 +8,6 @@ add new group Views, new file -> Cocoa Touch Class, subclass of uibutton, class 
 
 import UIKit
 
-class BorderButton: UIButton {
-
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        layer.borderWidth = 2.0
-        layer.borderColor = UIColor.white.cgColor
-    }
-
-}
-```
-
-Old style centering and positioning elements in ios:
-
-```swift
 class ViewController: UIViewController {
     @IBOutlet weak var swoosh: UIImageView!
     @IBOutlet weak var bgImg: UIImageView!
@@ -41,5 +20,12 @@ class ViewController: UIViewController {
         bgImg.frame = view.frame
         
     }
+
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+
+
 }
-```
+
